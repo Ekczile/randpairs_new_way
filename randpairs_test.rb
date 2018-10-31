@@ -37,4 +37,17 @@ class Test_random < Minitest::Test
         pairs = create_random_pairs(["steven", "sam", "tracy", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker"])
         assert_equal(6, pairs.count)
     end
+    def test_same_names
+        pairs = create_random_pairs(["steven", "steven", "steven", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker"])
+        assert_equal(6, pairs.count)
+    end
+    def test_seven
+        pairs = create_random_pairs(["steven", "sam", "tracy", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker", "harry", "billy"])
+        assert_equal(7, pairs.count)
+    end
+    def test_seven
+        pairs = create_random_pairs(["steven", "sam", "tracy", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker", "harry", "billy", "jack"])
+        assert_equal(7, pairs.count)
+    end
+
 end

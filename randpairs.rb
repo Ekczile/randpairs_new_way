@@ -19,20 +19,23 @@ def create_random_pairs(pairs)
             #making a variable set to false when array isnt full
             array_full = false
             # nested conditional when pair is equal to 3
-                if cfp == 3
-                    #array is now full
-                    array_full = true
-                end
-            #
+            if cfp == 3
+                array_full = true
+            end
+            #else index counter is less than 2
         else  arr[cfi].length < 2
+            # shoving v into cfi index of arr
             arr[cfi].push(v)
+            #nested conditional when pair is equal to 2
             if arr[cfi].length == 2
                 array_full = true
             end
         end
+        #conditional for when array is full and there is still a pair left over
         if array_full == true && v != random_pairs.last
             cfi += 1
             arr[cfi] = Array.new
+            #variable stating new array is empty
             array_full = false
         end
     end
