@@ -42,4 +42,3 @@ def create_random_pairs(pairs)
     p arr
     return arr
 end
-

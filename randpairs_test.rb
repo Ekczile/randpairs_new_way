@@ -42,12 +42,11 @@ class Test_random < Minitest::Test
         assert_equal(6, pairs.count)
     end
     def test_seven
-        pairs = create_random_pairs(["steven", "sam", "tracy", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker", "harry", "billy"])
-        assert_equal(7, pairs.count)
-    end
-    def test_seven
         pairs = create_random_pairs(["steven", "sam", "tracy", "jeremy", "reptar", "tommy", "chucky", "angelica", "kahn", "kayne", "gary", "parker", "harry", "billy", "jack"])
         assert_equal(7, pairs.count)
     end
-
+    def test_seven
+        pairs = create_random_pairs(["Nam4e", "N3ame", "Name", "Name", "Name"])
+        assert_equal(2, pairs.count)
+    end
 end
